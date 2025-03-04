@@ -1,0 +1,98 @@
+/** @format */
+
+.section {
+  width: 100%;
+  max-width: 1366px;
+  height: 100vh;
+  max-height: 650px;
+  display: flex;
+  position: relative;
+
+  .content-intro {
+    display: flex;
+    width: 840px;
+    flex: none;
+    padding: 4rem;
+    flex-direction: column;
+    justify-content: center;
+
+    .intro-text {
+      font-size: 55px;
+    }
+  }
+  .content-preview {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .preview-img {
+      width: 750px;
+      transform-origin: 0 0;
+      transform: scale(1.4) translateY(20px);
+      -webkit-backdrop-filter: blur(50px);
+      backdrop-filter: blur(50px);
+      border-radius: 20px;
+      box-shadow: 0 0 20px #0003;
+      animation: _fadeIn_8729n_1 0.4s ease-in-out both;
+      animation-delay: 0.5s;
+      position: relative;
+
+      .img {
+        width: 100%;
+        height: 488px;
+        background-color: transparent;
+        background-image: url(/dorawatch.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+}
+.section2 {
+  margin: auto;
+  margin-top: 13rem;
+  width: 100%;
+  max-width: 1366px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .text {
+    margin-top: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
+    text-align: center;
+  }
+  .preview-img2 {
+    width: 750px;
+    margin: auto;
+    margin-top: 2rem;
+
+    .img2 {
+      width: 100%;
+      height: 460px;
+      background-color: transparent;
+      background-image: url(/dorawatch2.webp);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+
+.footer {
+  border-top: 1px solid #e5e7eb;
+  width: 100%;
+
+  .footer-container {
+    width: calc(100% - 4rem);
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+  }
+}

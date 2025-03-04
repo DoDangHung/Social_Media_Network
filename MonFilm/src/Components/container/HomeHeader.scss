@@ -1,0 +1,185 @@
+/** @format */
+
+// styles.scss
+
+$white: #ffffff;
+$primary-text: #1c160c;
+$secondary-bg: #f4efe6;
+
+body {
+  font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;
+}
+
+.design-root {
+  width: calc(100% - 2rem);
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  transition: 0.3s;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  border-bottom: 1px solid transparent;
+  background-color: #fdfefe;
+
+  .layout-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+    padding: 0;
+
+    @media (min-width: 640px) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+
+    header {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1rem;
+
+      @media (min-width: 768px) {
+        padding: 0.75rem 2.5rem;
+      }
+
+      .header-left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        color: $primary-text;
+
+        .logo {
+          width: 1rem;
+          height: 1rem;
+          display: inline-block;
+
+          svg {
+            fill: currentColor;
+          }
+        }
+
+        .brand-title {
+          font-size: 1.125rem;
+          font-weight: bold;
+          line-height: 1.25;
+          letter-spacing: -0.015em;
+        }
+      }
+
+      .header-right {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        gap: 2rem;
+
+        .button-group {
+          display: flex;
+          gap: 0.5rem;
+
+          .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 2.5rem;
+            background-color: $secondary-bg;
+            color: $primary-text;
+            border-radius: 9999px;
+            padding: 0 0.625rem;
+            font-size: 0.875rem;
+            font-weight: bold;
+            letter-spacing: 0.015em;
+          }
+        }
+
+        .profile-image {
+          width: 2.5rem;
+          height: 2.5rem;
+          margin-top: 8px;
+          border-radius: 50%;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-image: url("https://cdn.usegalileo.ai/sdxl10/3626cf3a-8bcf-4b43-999a-f401d2f88b55.png");
+          cursor: pointer;
+        }
+        .dropdown-menu {
+          position: absolute;
+          right: 0;
+          top: 55px;
+          width: 223px;
+          background-color: #fff;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          display: none;
+          flex-direction: column;
+          padding: 0.5rem;
+
+          .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 20px 0;
+            color: #333; /* Màu chữ */
+            font-weight: bold;
+            font-size: 14px;
+          }
+          .divider::before,
+          .divider::after {
+            content: "";
+            flex: 1; /* Đảm bảo các đường kẻ chiếm hết khoảng trống */
+            border-bottom: 1px solid #ccc; /* Đường kẻ */
+          }
+          .divider::before {
+            margin-right: 0px; /* Khoảng cách giữa đường kẻ và chữ */
+          }
+
+          .divider::after {
+            margin-left: 0px; /* Khoảng cách giữa chữ và đường kẻ */
+          }
+        }
+
+        .dropdown-menu.show {
+          display: flex;
+        }
+
+        .dropdown-item {
+          padding: 0.5rem 1rem;
+          cursor: pointer;
+          font-size: 15px;
+          line-height: 15px;
+          display: flex;
+          gap: 10px;
+          padding-left: 1px;
+        }
+
+        .dropdown-item:hover {
+          background-color: #f4f4f4;
+        }
+      }
+    }
+
+    .overLay {
+      position: fixed;
+      z-index: 998;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #00000080;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.3s;
+    }
+  }
+}

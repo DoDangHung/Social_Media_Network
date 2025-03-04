@@ -1,0 +1,23 @@
+/** @format */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+
+  .sidebar-container-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background: #ffffff;
+
+    .side-bar-name {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: 500;
+      line-height: 1.5;
+      color: #1c160c;
+    }
+  }
+}

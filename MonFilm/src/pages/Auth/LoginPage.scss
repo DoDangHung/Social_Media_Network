@@ -1,0 +1,191 @@
+/** @format */
+
+.login-screen {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(#ffffff80, #ffffff80), url(/login-img.webp);
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  overflow: hidden;
+
+  .login-modal {
+    width: 1200px;
+    max-height: 600px;
+    position: relative;
+    border-radius: 10px;
+    height: 80vh;
+    background: #fffc;
+    box-shadow: 0 0 50px #0000004d;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: 0.3s;
+    overflow: hidden;
+    position: absolute;
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+    animation: 1.3s;
+    padding: 1rem;
+    border: 1px solid var(--joy-palette-neutral-outlinedBorder);
+
+    .login-img {
+      width: 100%;
+      height: 100%;
+      background: url(/login-banner.webp);
+      background-position: center;
+      background-size: cover;
+      position: relative;
+      transition: 0.3s;
+      border-radius: 8px;
+      border: 1px solid var(--joy-palette-neutral-outlinedBorder);
+
+      .logo {
+        width: 80px;
+        margin: 1rem;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        opacity: 0.5;
+      }
+    }
+    .login-form {
+      width: calc(420px - 3rem);
+      flex: none;
+      flex-direction: column;
+      padding: 1.5rem 0.5rem 1.5rem 1.5rem;
+      height: calc(100% - 3rem);
+      //   display: flex;
+      justify-content: center;
+      position: relative;
+      transition: 0.3s;
+      overflow: auto;
+
+      .login-main {
+        margin-top: 1rem;
+
+        .input-login {
+          border: 1px solid #0b6bcb;
+          border-radius: 5px;
+          width: 100%;
+          outline: 0px;
+          padding: 5px;
+          margin-bottom: 20px;
+          height: 50px;
+          flex: 1 1 0%;
+          color: inherit;
+          background-color: transparent;
+          font-family: inherit;
+          font-size: inherit;
+          font-style: inherit;
+          font-weight: inherit;
+          line-height: inherit;
+          text-overflow: ellipsis;
+        }
+        .btn-login {
+          background-color: #63a8ef;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 40px;
+          border-radius: 5px;
+          margin-bottom: 20px;
+
+          .svg-google {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+          }
+        }
+        .btn-login:hover {
+          background-color: #0b6bcb;
+          transition: 0.8s;
+        }
+        .btn-baw {
+          background-color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 40px;
+          border-radius: 5px;
+          margin-bottom: 20px;
+        }
+        .btn-baw:hover {
+          background-color: #f0f4f8;
+          transition: 0.8s;
+        }
+        .divider {
+          display: flex;
+          align-items: center;
+          text-align: center;
+          margin: 20px 0;
+          color: #333; /* Màu chữ */
+          font-weight: bold;
+          font-size: 14px;
+        }
+        .divider::before,
+        .divider::after {
+          content: "";
+          flex: 1; /* Đảm bảo các đường kẻ chiếm hết khoảng trống */
+          border-bottom: 1px solid #ccc; /* Đường kẻ */
+        }
+        .divider::before {
+          margin-right: 10px; /* Khoảng cách giữa đường kẻ và chữ */
+        }
+
+        .divider::after {
+          margin-left: 10px; /* Khoảng cách giữa chữ và đường kẻ */
+        }
+
+        .register {
+          display: flex;
+          justify-content: space-around;
+
+          .btn-register {
+            font-size: 13px;
+            color: blue;
+          }
+          .btn-register:hover {
+            text-decoration: underline;
+          }
+          .btn-forgot {
+            font-size: 13px;
+            color: blue;
+          }
+          .btn-forgot:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    /* Tùy chỉnh thanh cuộn */
+    .login-form::-webkit-scrollbar {
+      width: 4px; /* Độ rộng thanh cuộn mảnh */
+    }
+
+    /* Phần nền của thanh cuộn */
+    .login-form::-webkit-scrollbar-track {
+      background-color: #f1f1f1; /* Màu nền nhạt */
+      border-radius: 10px; /* Bo tròn nền thanh cuộn */
+    }
+
+    /* Phần kéo (thumb) */
+    .login-form::-webkit-scrollbar-thumb {
+      background-color: #aaa; /* Màu thanh kéo */
+      border-radius: 10px; /* Bo tròn thanh kéo */
+    }
+
+    /* Hover thanh kéo */
+    .login-form::-webkit-scrollbar-thumb:hover {
+      background-color: #888; /* Màu đậm hơn khi hover */
+    }
+  }
+}
